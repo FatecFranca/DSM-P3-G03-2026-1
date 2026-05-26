@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Usuarios {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  nome          String
+  email         String
+  genero        String
+  data_cadastro DateTime
+
+  relatos       Relatos[] @relation("UsuarioRelatos")
+
+  @@map("usuarios")
+}
+
+model Relatos {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome        String?
+  descricao   String
+  email       String
+  data_relato DateTime
+  status      String
+
+  usu_ref     String   @db.ObjectId
+  usuario     Usuarios @relation("UsuarioRelatos", fields: [usu_ref], references: [id])
+
+  transt_ref  String[] @db.ObjectId
+
+  @@map("relatos")
+}
+
+model Transtornos {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome      String
+  descricao String
+
+  inst_ref  String[] @db.ObjectId
+
+  @@map("transtornos")
+}
+
+model Intituicoes {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome      String
+  descricao String
+
+  prof_ref  String[] @db.ObjectId
+
+  @@map("intituicoes")
+}
+
+model Profissionais {
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  nome           String
+  formacao       String
+  resumo         String
+  faculdade      String
+  cpf            String
+  crm_crp        String
+  status         String
+  email          String
+  senha          String
+  estado         String
+  cidade         String
+  logradouro     String
+
+  inst_ref       String[]        @db.ObjectId
+
+  especialidades Especialidade[] @relation("ProfissionalEspecialidades")
+
+  @@map("profissionais")
+}
+
+model Especialidade {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  nome            String
+  rqe             String?
+  abordagem       String
+
+  profissional_id String        @db.ObjectId
+  profissional    Profissionais @relation("ProfissionalEspecialidades", fields: [profissional_id], references: [id])
+
+  @@map("especialidades")
+}

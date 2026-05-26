@@ -1,0 +1,24 @@
+{
+  "name": "psiconect",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./src/bin/server.js",
+    "start": "node ./src/bin/server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "chalk": "^5.6.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "prisma": "^6.19.3"
+  },
+  "type": "module"
+}

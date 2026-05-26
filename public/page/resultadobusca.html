@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Psiconect</title>
+    <link rel="stylesheet" href="../assents/style/styles.css">
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: 0; padding: 0px;">
+    <div class="container-fluid"
+      style="background-color: #17375F; font-family: 'parisine-bold'; margin-top: 0; padding: 5px; ">
+      <a class="navbar-brand" href="./index.html"><img src="../assents/images/PSICONECT-AZUL-CLARO-FUNDO-AZUL.png"
+          width="120" height="auto"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="inicio" href="./index.html"
+              style="color: #9dc8fd;">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./canais.html" style="color: #9dc8fd;">Canais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./transtornos.html" style="color: #9dc8fd;">Transtornos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre.html" style="color: #9dc8fd;">Sobre o site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./profissionais.html" style="color: #9dc8fd;">Profissionais</a>
+          </li>
+          <li class="nav-item dropdown ms-auto" id="drop"  >
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+              aria-expanded="false" style="color: #9dc8fd; margin-right: 20px;">Login</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="login.html">Profisional</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" action="resultadobusca.html" method="get">
+          <input class="form-control me-2" type="search" placeholder="Busca" aria-label="search" name="q" required />
+          <button class="btn btn-outline-success" type="submit" style="background-color: #17375F; color: white;">
+            Buscar
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body class="pagina" id="pagina">
+    <main class="flex-box container">
+        <section id="maginbusca">
+            <div class="card-text" id="resultadodabusca"></div>
+            <br>
+            <a href="./index.html" class="btn btn-primary">Pagina inicial</a>
+    </main>
+    <script type="module" src="../assents/js/receber-relatos.js"></script>
+    <script type="module" src="../assents/js/relatos-index.js"></script>
+    <script src="../assents/js/motor-busca.js"></script>
+
+
+</body>
+<footer id="rodape">
+    © Psiconect - Todos direitos reservados
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -56,6 +56,8 @@ model Intituicoes {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   nome      String
   descricao String
+  endereco  String
+  telefone  String
 
   prof_ref  String[] @db.ObjectId
 
@@ -95,3 +97,4 @@ model Especialidade {
 
   @@map("especialidades")
 }
+ 

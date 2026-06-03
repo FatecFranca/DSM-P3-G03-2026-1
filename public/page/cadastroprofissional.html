@@ -2,12 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Psiconect</title>
-    <link rel="stylesheet" href="../assents/style/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <title>Psiconect</title>
+  <link rel="stylesheet" href="../assents/style/styles.css">
 </head>
 
 <!-- BLOCO DE CÓDIGO REFERENTE AO NAV/BAR -->
@@ -24,8 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="inicio" href="./index.html"
-              style="color: #9dc8fd;">Inicio</a>
+            <a class="nav-link" aria-current="inicio" href="./index.html" style="color: #9dc8fd;">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./canais.html" style="color: #9dc8fd;">Canais</a>
@@ -39,11 +38,15 @@
           <li class="nav-item">
             <a class="nav-link" href="./profissionais.html" style="color: #9dc8fd;">Profissionais</a>
           </li>
-          <li class="nav-item dropdown ms-auto" id="drop"  >
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
-              aria-expanded="false" style="color: #9dc8fd; margin-right: 20px;">Login</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./instituicoes.html" style="color: #9dc8fd;">Instituições</a>
+          </li>
+          <li class="nav-item dropdown ms-auto" id="drop">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+              style="color: #9dc8fd; margin-right: 20px;">Login</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="login.html">Profisional</a></li>
+              <li><a class="dropdown-item" href="cadastroprofissional.html">Cadastrar</a></li>
             </ul>
           </li>
         </ul>
@@ -59,101 +62,131 @@
 </header>
 
 <body id="pagina">
-    <div class="container" id="entrada_comentario" style="border: 4px solid #17375F;">
-        <!-- <p style="text-align: center !important;" id="entreda_comentario_textos">Você pode compartilhar sua história de
+  <div class="container" id="entrada_comentario" style="border: 4px solid #17375F;">
+    <!-- <p style="text-align: center !important;" id="entreda_comentario_textos">Você pode compartilhar sua história de
             forma anônima - o nome é opcional e apelidos são bem-vindos!
         </p> -->
-        <p id="obrigatorio"> Todos os campos são obrigatorios</p>
-        <div class="mb-3">
-            <label for="nome" class="form-label" id="entreda_comentario_textos">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-        </div>
-        <div class="mb-3">
+    <h5 id="info-cadastro-prof">Atenção!</h5>
+    <p id="obrigatorio">
 
-            <label for="Formação" class="form-label" id="entreda_comentario_textos">Formação</label>
-            <input type="text" class="form-control" id="formacao" placeholder="Formação">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
+      O cadastro que você está prestes a realizar é destinado exclusivamente a profissionais da área de saúde mental,
+      tais como psicólogos, psiquiatras, terapeutas ocupacionais, psicanalistas e demais especialistas devidamente
+      qualificados.
 
-            <label for="faculdade" class="form-label" id="entreda_comentario_textos">Faculdade</label>
-            <input type="text" class="form-control" id="faculdade" placeholder="faculdade">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
+      Ao prosseguir com o cadastro, você declara que atua profissionalmente na área de saúde mental e que as informações
+      fornecidas são verdadeiras e atualizadas.
 
-            <label for="cpf" class="form-label" id="entreda_comentario_textos">CPF</label>
-            <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
+      Caso você não seja um profissional da área, solicitamos que não conclua o processo de cadastro, pois o acesso à
+      plataforma é restrito a profissionais habilitados.</p>
+  <div class="row">
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Formação</label>
+      <input type="text" class="form-control" id="formacao" placeholder="Formação">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Faculdade</label>
+      <input type="text" class="form-control" id="faculdade" placeholder="Faculdade">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">CPF</label>
+      <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">CRM/CRP</label>
+      <input type="text" class="form-control" id="crm_crp" placeholder="CRM/CRP">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Especialidade</label>
+      <input type="text" class="form-control" id="especialidade-nome" placeholder="Ex: Psicologia, Psiquiatria...">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">RQE (opcional)</label>
+      <input type="text" class="form-control" id="especialidade-rqe" placeholder="Número do RQE se houver">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Abordagem</label>
+      <input type="text" class="form-control" id="especialidade-abordagem" placeholder="Ex: TCC, Psicanálise...">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Cidade</label>
+      <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Estado</label>
+      <input type="text" class="form-control" id="estado" placeholder="Estado">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Logradouro</label>
+      <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">E-mail</label>
+      <input type="text" class="form-control" id="email" placeholder="Email">
+    </div>
+  </div>
 
-            <label for="crp" class="form-label" id="entreda_comentario_textos">CRP/CRP</label>
-            <input type="text" class="form-control" id="crp" placeholder="CRP/CRP">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
-
-            <label for="cidade" class="form-label" id="entreda_comentario_textos">Cidade</label>
-            <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
-
-            <label for="estado" class="form-label" id="entreda_comentario_textos">Estado</label>
-            <input type="text" class="form-control" id="estado" placeholder="Estado">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
-            <label for="logradouo" class="form-label" id="entreda_comentario_textos">Logradouro</label>
-            <input type="text" class="form-control" id="logradouo" placeholder="Logradouro">
-            <p id="alert"></p>
-        </div>
-        <div class="mb-3">
-            <label for="experiencia" class="form-label" id="entreda_comentario_textos">Experiência</label>
-            <textarea class="form-control" id="experiencia" rows="3"
-                placeholder="Divida suas experiências com a gente..."></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="inputPassword5" class="form-label" id="entreda_comentario_textos">Digite sua senha</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-        </div>
-
-        <div id="passwordHelpBlock" class="form-text">
-            Sua senha deve ter entre 8 e 20 caracteres, conter letras e números e não deve conter espaços,
-            caracteres especiais ou emojis.
-        </div>
-        <br>
-        <!-- <div class="mb-3">
-            <label for="selectDoenca" class="form-label" id="entreda_comentario_textos">*Transtornos</label>
-
-            <select id="selectDoenca" class="form-select" aria-label="Selecione um transtorno">
-
-                <option value="" selected>Selecionar</option>
-            </select>
-            <p id="alert3"></p>
-        </div> -->
-        <div class="was-validated">
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="aceitar-uso" required>
-                <label class="form-check-label" for="aceitar-uso">Aceitar termos de uso - Para saber mais <a
-                        href="termosdeusoprofi.html">clique aqui</a></label>
-                <!-- <div class="invalid-feedback">Aceito os termos para continuar</div> -->
-            </div>
-            <!-- <p id="alert4" style="font-weight: normal;"></p> -->
-
-        </div>
-        <br>
-        <button type="button" class="btn btn-primary" id="btnPublicar">Cadastrar</button>
+  <!-- campos que ocupam linha inteira -->
+  <div class="col-md-12">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Experiência</label>
+      <textarea class="form-control" id="resumo" rows="3" placeholder="Divida suas experiências com a gente..."></textarea>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="mb-3">
+      <label class="form-label" id="entreda_comentario_textos">Senha</label>
+      <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="form-text">
+        Sua senha deve ter entre 8 e 20 caracteres, conter letras e números e não deve conter espaços, caracteres especiais ou emojis.
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="was-validated">
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="aceitar-uso" required>
+        <label class="form-check-label" for="aceitar-uso">Aceitar termos de uso - Para saber mais <a
+            href="termosdeusoprofi.html">clique aqui</a></label>
+      </div>
 
     </div>
-    <script type="module" src="../assents/js/receber-relatos.js"></script>
-    <script type="module" src="../assents/js/relatos-index.js"></script>
-    <script src="../assents/js/motor-busca.js"></script>
+    <br>
+    <button type="button" class="btn btn-primary" id="btnPublicar">Cadastrar</button>
+
+  </div>
+  <script type="module" src="../assents/js/receber-cadastro.js"></script>
+  <script src="../assents/js/motor-busca.js"></script>
 </body>
 
 <footer id="rodape">
-    © Psiconect - Todos direitos reservados
+  © Psiconect - Todos direitos reservados
 </footer>
 
 
@@ -162,5 +195,4 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

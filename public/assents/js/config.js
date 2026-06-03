@@ -1,5 +1,5 @@
 const API_CONFIG = {
-    baseURL: window.location.origin + '/api'
+    baseURL: 'http://localhost:8080'
 }
 
 export default API_CONFIG

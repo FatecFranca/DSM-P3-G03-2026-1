@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1">
           <li class="nav-item">
-            <a class="nav-link " aria-current="inicio" href="./index.html" style="color: #9dc8fd;">Inicio</a>
+            <a class="nav-link active" aria-current="inicio" href="./index.html" style="color: #9dc8fd;">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./canais.html" style="color: #9dc8fd;">Canais</a>
@@ -37,9 +37,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./profissionais.html" style="color: #9dc8fd;">Profissionais</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./instituicoes.html" style="color: #9dc8fd;">Instituições</a>
           </li>
           <li class="nav-item dropdown ms-auto" id="drop">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
@@ -63,75 +60,93 @@
 
 <body id="pagina">
   <div class="container" id="entrada_comentario" style="border: 4px solid #17375F;">
-    <p style="text-align: center !important;" id="entreda_comentario_textos">Você pode compartilhar sua história de
-      forma anônima - o nome é opcional e apelidos são bem-vindos!
+    <!-- <p style="text-align: center !important;" id="entreda_comentario_textos">Você pode compartilhar sua história de
+            forma anônima - o nome é opcional e apelidos são bem-vindos!
+        </p> -->
+    <h5 id="info-cadastro-prof">Atenção!</h5>
+    <p id="obrigatorio"> 
+
+        
     </p>
-    <p id="obrigatorio"> Campos obrigatorios (*)</p>
     <div class="mb-3">
       <label for="nome" class="form-label" id="entreda_comentario_textos">Nome</label>
-      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome, apelido ou deixe em branco">
+      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
     </div>
     <div class="mb-3">
 
-      <label for="email" class="form-label" id="entreda_comentario_textos">*Email</label>
-      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      <label for="Formação" class="form-label" id="entreda_comentario_textos">Formação</label>
+      <input type="text" class="form-control" id="formacao" placeholder="Formação">
       <p id="alert"></p>
     </div>
-
-    <div class="form-check mb-3">
-      <input type="checkbox" class="form-check-input" id="ja-tenho-cadastro">
-      <label class="form-check-label" for="ja-tenho-cadastro">Já tenho cadastro</label>
-    </div>
-
-    <div id="campos-novo-usuario">
-      <div class="mb-3">
-        <div id="campos-novo-usuario" style="transition: opacity 0.3s;">
-        </div>
-        <label for="genero" class="form-label">Gênero</label>
-        <select class="form-select" id="genero">
-          <option value="" selected>Selecionar</option>
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-          <option value="nao-binario">Não-binário</option>
-          <option value="prefiro-nao-dizer">Prefiro não dizer</option>
-          <div id="campos-novo-usuario" style="transition: opacity 0.3s;">
-        </select>
-      </div>
-    </div>
-
     <div class="mb-3">
-      <label for="relato" class="form-label" id="entreda_comentario_textos">*Conte-nos sua historia</label>
-      <textarea class="form-control" id="relato" rows="5" maxlength="400"
-        placeholder="Nos conte a sua historia"></textarea>
-      <div class="form-text text-end" id="contador">0 / 400 caracteres</div>
-      <p id="alert2" style="font-weight: normal;"></p>
+
+      <label for="faculdade" class="form-label" id="entreda_comentario_textos">Faculdade</label>
+      <input type="text" class="form-control" id="faculdade" placeholder="faculdade">
+      <p id="alert"></p>
     </div>
     <div class="mb-3">
 
-      <label for="selectDoenca" class="form-label" id="entreda_comentario_textos">*Transtornos</label>
-
-      <select id="selectDoenca" class="form-select" aria-label="Selecione um transtorno">
-
-        <option value="" selected>Selecionar</option>
-      </select>
-      <p id="alert3"></p>
+      <label for="cpf" class="form-label" id="entreda_comentario_textos">CPF</label>
+      <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+      <p id="alert"></p>
     </div>
+    <div class="mb-3">
+
+      <label for="crm_crp" class="form-label" id="entreda_comentario_textos">CRP/CRP</label>
+      <input type="text" class="form-control" id="crm_crp" placeholder="CRP/CRP">
+      <p id="alert"></p>
+    </div>
+    <div class="mb-3">
+
+      <label for="cidade" class="form-label" id="entreda_comentario_textos">Cidade</label>
+      <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+      <p id="alert"></p>
+    </div>
+    <div class="mb-3">
+
+      <label for="estado" class="form-label" id="entreda_comentario_textos">Estado</label>
+      <input type="text" class="form-control" id="estado" placeholder="Estado">
+      <p id="alert"></p>
+    </div>
+    <div class="mb-3">
+      <label for="logradouro" class="form-label" id="entreda_comentario_textos">logradouro </label>
+      <input type="text" class="form-control" id="logradouro" placeholder="logradouro">
+      <p id="alert"></p>
+    </div>
+    <div class="mb-3">
+      <label for="resumo" class="form-label" id="entreda_comentario_textos">Experiência</label>
+      <textarea class="form-control" id="resumo" rows="3"
+        placeholder="Divida suas experiências com a gente..."></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label" id="entreda_comentario_textos">E-mail</label>
+      <input type="text" class="form-control" id="email" placeholder="email">
+      <p id="alert"></p>
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword5" class="form-label" id="entreda_comentario_textos">Digite sua senha</label>
+      <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+    </div>
+
+    <div id="passwordHelpBlock" class="form-text">
+      Sua senha deve ter entre 8 e 20 caracteres, conter letras e números e não deve conter espaços,
+      caracteres especiais ou emojis.
+    </div>
+    <br>
+
     <div class="was-validated">
       <div class="form-check mb-3">
         <input type="checkbox" class="form-check-input" id="aceitar-uso" required>
         <label class="form-check-label" for="aceitar-uso">Aceitar termos de uso - Para saber mais <a
-            href="termosdeuso.html">clique aqui</a></label>
-        <!-- <div class="invalid-feedback">Aceito os termos para continuar</div> -->
+            href="termosdeusoprofi.html">clique aqui</a></label>
       </div>
-      <!-- <p id="alert4" style="font-weight: normal;"></p> -->
 
     </div>
     <br>
-    <button type="button" class="btn btn-primary" id="btnPublicar">Publicar</button>
+    <button type="button" class="btn btn-primary" id="btnPublicar">Cadastrar</button>
 
   </div>
-  <script type="module" src="../assents/js/receber-relatos.js"></script>
-  <script type="module" src="../assents/js/relatos-index.js"></script>
+  <script type="module" src="../assents/js/receber-cadastro.js"></script>
   <script src="../assents/js/motor-busca.js"></script>
 </body>
 

@@ -69,6 +69,3 @@ O projeto utiliza os seguintes models no Prisma:
 - 🔎 **Curiosidade** — vontade constante de aprender e melhorar
 - 💙 **Empatia** — respeito e acolhimento a todas as histórias e condições
 
----
-
-> Explore o repositório e descubra como o **Psiconect** pode fazer a diferença na vida das pessoas! 💚

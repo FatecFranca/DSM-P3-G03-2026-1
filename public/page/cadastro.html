@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <title>Psiconect</title>
+  <link rel="stylesheet" href="../assents/style/styles.css">
+</head>
+
+<!-- BLOCO DE CÓDIGO REFERENTE AO NAV/BAR -->
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: 0; padding: 0px;">
+    <div class="container-fluid"
+      style="background-color: #17375F; font-family: 'parisine-bold'; margin-top: 0; padding: 5px; ">
+      <a class="navbar-brand" href="./index.html"><img src="../assents/images/PSICONECT-AZUL-CLARO-FUNDO-AZUL.png"
+          width="120" height="auto"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="inicio" href="./index.html" style="color: #9dc8fd;">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./canais.html" style="color: #9dc8fd;">Canais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./transtornos.html" style="color: #9dc8fd;">Transtornos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre.html" style="color: #9dc8fd;">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./profissionais.html" style="color: #9dc8fd;">Profissionais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./instituicoes.html" style="color: #9dc8fd;">Instituições</a>
+          </li>
+          <li class="nav-item dropdown ms-auto" id="drop">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+              style="color: #9dc8fd; margin-right: 20px;">Login</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="login.html">Profisional</a></li>
+              <li><a class="dropdown-item" href="cadastroprofissional.html">Cadastrar</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" action="resultadobusca.html" method="get">
+          <input class="form-control me-2" type="search" placeholder="Busca" aria-label="search" name="q" required />
+          <button class="btn btn-outline-success" type="submit" style="background-color: #17375F; color: white;">
+            Buscar
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body id="pagina">
+  <div class="container" id="entrada_comentario" style="border: 4px solid #17375F;">
+    <p style="text-align: center !important;" id="entreda_comentario_textos">Você pode compartilhar sua história de
+      forma anônima - o nome é opcional e apelidos são bem-vindos!
+    </p>
+    <p id="obrigatorio"> Campos obrigatorios (*)</p>
+    <div class="mb-3">
+      <label for="nome" class="form-label" id="entreda_comentario_textos">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome, apelido ou deixe em branco">
+    </div>
+    <div class="mb-3">
+
+      <label for="email" class="form-label" id="entreda_comentario_textos">*Email</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      <p id="alert"></p>
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="ja-tenho-cadastro">
+      <label class="form-check-label" for="ja-tenho-cadastro">Já tenho cadastro</label>
+    </div>
+
+    <div id="campos-novo-usuario">
+      <div class="mb-3">
+        <div id="campos-novo-usuario" style="transition: opacity 0.3s;">
+        </div>
+        <label for="genero" class="form-label" id="entreda_comentario_textos">Gênero</label>
+        <select class="form-select" id="genero">
+          <option value="" selected>Selecionar</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="nao-binario">Não-binário</option>
+          <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+          <div id="campos-novo-usuario" style="transition: opacity 0.3s;">
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="relato" class="form-label" id="entreda_comentario_textos">*Conte-nos sua historia</label>
+      <textarea class="form-control" id="relato" rows="5" maxlength="400"
+        placeholder="Nos conte a sua historia"></textarea>
+      <div class="form-text text-end" id="contador">0 / 400 caracteres</div>
+      <p id="alert2" style="font-weight: normal;"></p>
+    </div>
+    <div class="mb-3">
+
+      <label for="selectDoenca" class="form-label" id="entreda_comentario_textos">*Transtornos</label>
+
+      <select id="selectDoenca" class="form-select" aria-label="Selecione um transtorno">
+
+        <option value="" selected>Selecionar</option>
+      </select>
+      <p id="alert3"></p>
+    </div>
+    <div class="was-validated">
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="aceitar-uso" required>
+        <label class="form-check-label" for="aceitar-uso">Aceitar termos de uso - Para saber mais <a
+            href="termosdeuso.html">clique aqui</a></label>
+        <!-- <div class="invalid-feedback">Aceito os termos para continuar</div> -->
+      </div>
+      <!-- <p id="alert4" style="font-weight: normal;"></p> -->
+
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" id="btnPublicar">Publicar</button>
+
+  </div>
+  <script type="module" src="../assents/js/receber-relatos.js"></script>
+  <script type="module" src="../assents/js/relatos-index.js"></script>
+  <script src="../assents/js/motor-busca.js"></script>
+</body>
+
+<footer id="rodape">
+  © Psiconect - Todos direitos reservados
+</footer>
+
+
+
+<!-- FIM DO BLOCO DE CÓDIGO DE RODA PÉ-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
